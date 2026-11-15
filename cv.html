@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resume — Chenghan Xie</title>
+  <meta name="description" content="Resume of Chenghan Xie, Mechanical Engineering, University of Toronto: robotics research, industry experience, skills and publications.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/aaaakshat/cm-web-fonts@latest/fonts.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="logo" aria-label="Home">
+        Cheng<span class="tag"></span>
+      </a>
+      <button class="nav-toggle" aria-label="Menu" aria-expanded="false">☰</button>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="cv.html" class="active">Resume</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <header class="page-hero">
+    <div class="container">
+      <h1>Resume</h1>
+      <div class="cv-actions">
+        <button id="print-cv" class="btn btn-primary">Save as PDF <span class="arrow">↓</span></button>
+        <a href="https://www.linkedin.com/in/chenghan-xie/" target="_blank" rel="noopener" class="btn">LinkedIn ↗</a>
+      </div>
+    </div>
+  </header>
+
+  <section style="padding-top: 10px;">
+    <div class="container">
+      <div class="tex-viewer reveal">
+        <div class="tex-toolbar">
+          <div class="tex-file mono">
+            <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 1h7l3 3v11H3z" fill="none" stroke="currentColor" stroke-width="1.2"/><path d="M10 1v3h3" fill="none" stroke="currentColor" stroke-width="1.2"/></svg>
+            Chenghan_Xie_Resume.pdf
+          </div>
+          <div class="tex-tools">
+            <button type="button" data-zoom="out" aria-label="Zoom out">−</button>
+            <span class="tex-zoom mono" aria-live="polite">100%</span>
+            <button type="button" data-zoom="in" aria-label="Zoom in">+</button>
+            <button type="button" data-zoom="fit" class="tex-fit mono" aria-label="Fit to width">Fit</button>
+            <span class="tex-sep"></span>
+            <span class="tex-pages mono">1 / 1</span>
+            <button type="button" id="tex-download" aria-label="Download PDF">
+              <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M8 2v8M4.5 6.5 8 10l3.5-3.5M2.5 13.5h11" fill="none" stroke="currentColor" stroke-width="1.4"/></svg>
+            </button>
+          </div>
+        </div>
+
+        <div class="tex-canvas">
+          <div class="tex-frame">
+            <article class="tex-page">
+
+              <header class="tex-heading">
+                <h2>Chenghan Xie</h2>
+                <p></span> <a href="mailto:cxie0923@gmail.com">cxie0923@gmail.com</a> <span class="bar">|</span>
+                  <a href="https://www.linkedin.com/in/chenghan-xie/" target="_blank" rel="noopener">linkedin.com/in/chenghan-xie</a></p>
+              </header>
+
+              <h3 class="tex-section">Education</h3>
+              <div class="tex-list">
+                <div class="tex-sub">
+                  <div class="row"><b>University of Toronto</b><span>Toronto, ON</span></div>
+                  <div class="row sm"><i>Bachelor of Applied Science in Mechanical Engineering</i><i>Sep 2022 – May 2027</i></div>
+                  <ul>
+                    <li>Most recent year GPA: 3.90/4.00, Cumulative GPA: 3.66/4.00, Robotics and Mechatronics minor, AI Engineering certificate</li>
+                    <li>4X Dean's Honours List, Recipient of the 2024 MIE Summer Research Award – $7,500</li>
+                    <li>University of Toronto Formula Racing – Suspension (kinematic analysis, FEA); ASHRAE UofT – Vice President</li>
+                  </ul>
+                </div>
+              </div>
+
+              <h3 class="tex-section">Research Experience &amp; Projects</h3>
+              <div class="tex-list">
+                <div class="tex-sub">
+                  <div class="row sm"><b>Deep Learning for Robotic Grasping in Domestic Environments</b><span>Sep 2026 – Current</span></div>
+                  <div class="row sm"><i>Thesis, Robotics and Automation Laboratory (RAL) – Supervised by Prof. Andrew Goldenberg</i><i>Toronto, ON</i></div>
+                  <ul>
+                    <li>Building a modular perception-to-manipulation benchmark for a Franka Panda in Genesis, attributing pick-and-place failures to perception, grasp planning, or control across 1,000+ seeded YCB trials</li>
+                    <li>Benchmarked oracle, classical, and zero-shot Grounding DINO + SAM 2 segmentation; learned perception matches the oracle on single objects but drops from 92% to 74–84% in clutter</li>
+                    <li>Compared antipodal (+10 percentage points over box grasps) and Contact-GraspNet 6-DoF grasp planning; closed-loop slip-feedback grip control raises success from 85% to 95% under randomized mass and friction</li>
+                    <li>Next: OMPL/TOPP-RA motion planning and extension to garments and large deformables (e.g., bed-making)</li>
+                  </ul>
+                </div>
+
+                <div class="tex-sub">
+                  <div class="row sm"><b>Spiking Neural Networks for Tactile Sensing in Robotic Grasping</b><span>Aug 2026 – Sep 2026</span></div>
+                  <div class="row sm"><i>Chinese Academy of Sciences, Institute of Automation – Supervised by Prof. Xiaoguang Zhao</i><i>Beijing, China</i></div>
+                  <ul>
+                    <li>Independently proposed and explored spiking neural networks (SNNs) as an event-driven learning paradigm for tactile perception in robotic grasping</li>
+                    <li>Implemented an SNN baseline for tactile classification, matching the F1 score of an LSTM baseline (0.951) with 50% less latency, supporting SNNs for real time grasp stability feedback</li>
+                  </ul>
+                </div>
+
+                <div class="tex-sub">
+                  <div class="row sm"><b>Microfluidic Printhead Design for Aligned Collagen Fabrication</b><span>May 2024 – Dec 2024</span></div>
+                  <div class="row sm"><i>Research Intern, Guenther Laboratory / CRAFT – Supervised by Prof. Axel Guenther</i><i>Toronto, ON</i></div>
+                  <ul>
+                    <li>Redesigned microchannel geometry to resolve filling and flow-distribution issues, improving extrusion yield by 50% over the previous generation design</li>
+                    <li>Developed and experimentally validated a microfluidic 3D printing process, increasing manufacturing efficiency by 70%</li>
+                    <li>Developed a supervised machine learning model in Python to predict flow distribution, achieving 93% prediction accuracy</li>
+                  </ul>
+                </div>
+
+                <div class="tex-sub project">
+                  <div class="row sm"><span><b>Autonomous Maze Navigating Rover</b> <span class="bar">|</span> <em>C/C++ (Arduino), Python</em></span><span>Sep 2026 – Nov 2026</span></div>
+                  <ul>
+                    <li>Led a team of 4 to build a fully autonomous rover that fuses ultrasonic, ToF, IMU, IR, and wheel encoder data to localize from an unknown start, navigate a maze, and retrieve and deliver a target block</li>
+                    <li>Implemented particle filter localization, converging to a confident pose in under 5&#8201;s, paired with A* path planning</li>
+                    <li>Developed closed loop wall-following and heading control using PID on differential sensor readings and encoder feedback, holding heading drift under 5°</li>
+                    <li>Designed gripper sensing and grasp sequence around a VL53L0X ToF sensor, achieving 90% block pickup success</li>
+                  </ul>
+                </div>
+
+                <div class="tex-sub project">
+                  <div class="row sm"><span><b>Custom UAV Design and Integration</b> <span class="bar">|</span> <em>SolidWorks, Betaflight, MATLAB/Simulink</em></span><span>Jan 2026 – Jun 2026</span></div>
+                  <ul>
+                    <li>Designed a custom FPV drone platform, integrating STM32 flight controller, ESC, motors, power distribution and sensors</li>
+                    <li>Configured and tuned PID-based attitude control through iterative flight testing and gyro-data analysis, reducing roll/pitch oscillation by 30% and settling time by 25% relative to baseline tuning</li>
+                    <li>Validated flight performance through step-response and disturbance testing, achieving stable flight under 500 g of payload</li>
+                  </ul>
+                </div>
+              </div>
+
+              <h3 class="tex-section">Industry Experience</h3>
+              <div class="tex-list">
+                <div class="tex-sub">
+                  <div class="row"><b>Junior Designer</b><span>May 2025 – Aug 2026</span></div>
+                  <div class="row sm"><i>Smith + Andersen Consulting Engineering</i><i>North York, ON</i></div>
+                  <ul>
+                    <li>Delivered mechanical design for Atlantic Canada's largest healthcare project (QEII HIEP), performing load calculations across 5,000+ spaces and psychrometric analyses for critical environments, improving central plant energy efficiency by 20%</li>
+                    <li>Advised on $10M+ in equipment procurement through technical evaluations, balancing code compliance and lifecycle cost</li>
+                  </ul>
+                </div>
+              </div>
+
+              <h3 class="tex-section">Skills</h3>
+              <div class="tex-list">
+                <p class="tex-skills">
+                  <b>Programming</b>: Python, C/C++, MATLAB, JavaScript
+                  <b>Robotics</b>: PyTorch, ROS 2, OMPL, Genesis, Simulink, Arduino
+                  <b>Mechanical Design</b>: SolidWorks, Creo, Fusion 360, ANSYS, AutoCAD, Revit, GD&amp;T
+                  <b>Languages</b>: English, Mandarin
+                </p>
+              </div>
+
+              <h3 class="tex-section">Publications &amp; Presentations</h3>
+              <div class="tex-list">
+                <p class="tex-pub"><b>C. Xie</b>, W. Gao, A. Guenther, “Optimizing Microfluidic Printhead Design and Extrusion Methods for Aligned Collagen Sheets”
+                  <i>Undergraduate Engineering Research Day, University of Toronto</i>, Toronto, ON, [Aug 2024]. (Poster)</p>
+              </div>
+
+            </article>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container foot-inner">
+      <span>© <span data-year></span> Chenghan Xie · Mechanical Engineering, University of Toronto</span>
+      <div class="foot-links">
+        <a href="index.html">Home</a>
+        <a href="projects.html">Projects</a>
+        <a href="https://www.linkedin.com/in/chenghan-xie/" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>

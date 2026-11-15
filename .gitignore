@@ -1,0 +1,7 @@
+images/*
+!images/web/
+!images/ai-model.png
+!images/headshot-web.jpg
+.DS_Store
+Thumbs.db
+desktop.ini

@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chenghan Xie</title>
+  <meta name="description" content="Chenghan Xie, a mechanical engineering student at the University of Toronto working on robotic grasping and dexterous manipulation.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="logo" aria-label="Home">
+        Cheng<span class="tag"></span>
+      </a>
+      <button class="nav-toggle" aria-label="Menu" aria-expanded="false">☰</button>
+      <ul class="nav-links">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="cv.html">Resume</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div class="container hero-grid">
+      <div>
+        <h1>
+          <span class="line"><span>Chenghan Xie</span></span>
+        </h1>
+        <div class="affil mono"><span>Curr.</span> U of T Robotics &amp; Automation Lab<br><span>Prev.</span> Smith + Andersen, Guenther Lab / CRAFT</div>
+        <div class="roles">&gt; <span class="typed" data-words='["Robotic Grasping","Robot Learning","Obstacle Avoidance","Mechanical Design", "Hospital Mechanical Systems"]'></span><span class="caret"></span></div>
+        <p class="lead">Mechanical engineering student at the University of Toronto. Currently I'm in the Robotics &amp; Automation Lab, teaching a robot arm to pick up household things, from bottles to laundry to bedsheets.</p>
+        <div class="hero-ctas">
+          <a href="projects.html" class="btn btn-primary">Projects <span class="arrow">→</span></a>
+          <a href="cv.html" class="btn">Resume</a>
+        </div>
+      </div>
+      <figure class="hero-photo">
+        <img src="images/headshot-web.jpg" alt="Headshot of Chenghan Xie" width="760" height="765">
+      </figure>
+
+    </div>
+
+  </header>
+
+  <section id="about">
+    <div class="container about-split">
+      <div class="about-text reveal">
+        <h2 style="margin-bottom: 28px;">Hardware + <em>Software</em> =? </h2>
+        <p>Hey, I'm Cheng, a final-year Mechanical Engineering student at the <strong>University of Toronto</strong>.</p>
+        <p>I've always been fascinated by how human hands crack an egg, turn a key and catch a slipping object without a second thought, yet for robots these remain some of the hardest challenges in the field. Closing that gap takes more than better hardware or bigger models. It takes control systems that can reason about contact, adapt to uncertainty and respond in milliseconds. That intersection, where learned perception and touch feed into robust control is where I want to work.</p>
+        <p>My next step is <strong>graduate research in robotic manipulation and control</strong>. I'm especially interested in questions like: How should a multi-fingered hand use tactile feedback to adjust its grip in real time? How can we combine the flexibility of learned policies with the stability guarantees of classical control? What will it take to move dexterous manipulation out of the lab and into the real world?</p>
+      </div>
+      <aside class="about-side">
+        <div class="stats reveal">
+          <div class="flip" tabindex="0" role="button" aria-label="GPA highlights. Activate to flip to full academic history.">
+            <div class="flip-inner">
+              <div class="flip-face flip-front">
+                <div class="stat"><span class="idx mono"></span><div class="num"><span data-count="3.90">0</span></div><div class="label">Annual GPA out of 4.00</div></div>
+                <div class="stat"><span class="idx mono"></span><div class="num"><span data-count="3.66">0</span></div><div class="label">Cumulative GPA out of 4.00</div></div>
+                <div class="stat"><span class="idx mono"></span><div class="num"><span data-count="4">0</span><span class="unit">×</span></div><div class="label">Dean's Honours List</div></div>
+                <span class="flip-hint mono"><span class="h-hover">Hover</span><span class="h-tap">Tap</span> for more ↻</span>
+              </div>
+              <div class="flip-face flip-back">
+                <div class="ah-head mono">University of Toronto · B.A.Sc. Mechanical Engineering · 2022 – 2027</div>
+                <div class="ah-col">
+                  <h4 class="mono">Annual GPA</h4>
+                  <div class="gbar"><span>Year 1</span><div class="track"><div class="fill" style="--w:82%"></div></div><b>3.28/4.00</b></div>
+                  <div class="gbar"><span>Year 2</span><div class="track"><div class="fill" style="--w:95.75%"></div></div><b>3.83/4.00</b></div>
+                  <div class="gbar"><span>Year 3</span><div class="track"><div class="fill" style="--w:97.5%"></div></div><b>3.90/4.00</b></div>
+                  <p class="ah-note">Cumulative GPA <b>3.66</b></p>
+                </div>
+                <div class="ah-col">
+                  <h4 class="mono">Honours &amp; awards</h4>
+                  <div class="ah-item"><b>Dean's Honours List ×4</b><span></div>
+                  <div class="ah-item"><b>MIE Summer Research Award</b><span>2024 · $7,500 · Guenther Lab</span></div>
+                </div>
+                <div class="ah-col">
+                  <h4 class="mono">Teams &amp; leadership</h4>
+                  <div class="ah-item"><b>U of T Formula Racing</b><span>Suspension Member · kinematic analysis, FEA</span></div>
+                  <div class="ah-item"><b>ASHRAE U of T</b><span>Vice President</span></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="toolkit"><span class="mono">Toolkit</span><div class="chips"><span class="chip">Python</span><span class="chip">C/C++</span><span class="chip">MATLAB</span><span class="chip">JavaScript</span><span class="chip">PyTorch</span><span class="chip">OMPL</span><span class="chip">Genesis</span><span class="chip">Simulink</span><span class="chip">Betaflight</span><span class="chip">Arduino</span><span class="chip">SolidWorks</span><span class="chip">Creo</span><span class="chip">Fusion 360</span><span class="chip">ANSYS</span><span class="chip">AutoCAD</span><span class="chip">Revit</span><span class="chip">GD&amp;T</span></div></div>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <section id="work">
+    <div class="container">
+      <div class="section-head">
+        <div class="reveal">
+          <h2>A few things I've <em>built</em></h2>
+        </div>
+        <a href="projects.html" class="btn reveal">All projects <span class="arrow">→</span></a>
+      </div>
+
+      <div class="feature-grid two">
+        <a href="projects.html#thesis" class="pcard reveal">
+          <div class="viz"><img src="images/web/thesis-genesis.jpg" alt="Simulated Franka Panda arm reaching for a cube in Genesis, with RGB, depth and segmentation camera views" loading="lazy"></div>
+          <div class="body">
+            <div class="meta mono"><span>Thesis</span><span>Ongoing</span></div>
+            <h3>Deep Learning for Robotic Grasping</h3>
+            <p>A simulated Franka Panda arm that finds objects in a cluttered room, works out how to grab them and plans a collision-free path to do it. Next up: clothes, and eventually making a bed.</p>
+            <span class="more">More →</span>
+          </div>
+        </a>
+
+        <a href="projects.html#uav" class="pcard reveal reveal-delay-1">
+          <div class="viz"><img src="images/web/uav-drone.jpg" alt="Custom-built FPV drone with a mounted action camera" loading="lazy"></div>
+          <div class="body">
+            <div class="meta mono"><span>Personal project</span><span>2026</span></div>
+            <h3>Custom FPV Drone</h3>
+            <p>Designed and wired a FPV done, then tuned the PID loops from gyro logs until roll and pitch oscillation dropped by 30% and settling time by 25%. It now flies steadily carrying 500 g.</p>
+            <span class="more">More →</span>
+          </div>
+        </a>
+
+        <a href="projects.html#hospital" class="pcard reveal">
+          <div class="viz"><img src="images/web/qeii.jpg" alt="Rendering of the QEII Health Infrastructure Expansion Project in Halifax" loading="lazy"></div>
+          <div class="body">
+            <div class="meta mono"><span>Co-op · Smith + Andersen</span><span>2025 – 2026</span></div>
+            <h3>QEII Hospital Expansion</h3>
+            <p>Sixteen months on the mechanical design of Atlantic Canada's largest hospital project. I ran load calculations for over 5,000 spaces and psychrometric analyses for the critical rooms, and helped make the air handling and central plant 20% more efficient.</p>
+            <span class="more">More →</span>
+          </div>
+        </a>
+
+        <a href="projects.html#printhead" class="pcard reveal reveal-delay-1">
+          <div class="viz">
+            <div class="ph-grid">
+              <div class="ph-compare">
+                <div class="ph-cell"><img src="images/web/printhead-3d.jpg" alt="3D-printed clear microfluidic printhead with a bifurcating channel manifold" loading="lazy"><span class="ph-label">3D-printed</span></div>
+                <div class="ph-cell"><img src="images/web/printhead-pdms.jpg" alt="PDMS microfluidic printhead with the same channel manifold and a green inlet tube" loading="lazy"><span class="ph-label">PDMS</span></div>
+              </div>
+              <div class="ph-cell slides" aria-label="Prefill sequence from t0 to t30">
+                <img src="images/web/prefill-t0.jpg" class="on" data-label="Prefill t0" alt="Printhead prefill at t0">
+                <img src="images/web/prefill-t8.jpg" data-label="Prefill t8" alt="Printhead prefill at t8">
+                <img src="images/web/prefill-t12.jpg" data-label="Prefill t12" alt="Printhead prefill at t12">
+                <img src="images/web/prefill-t20.jpg" data-label="Prefill t20" alt="Printhead prefill at t20">
+                <img src="images/web/prefill-t30.jpg" data-label="Prefill t30" alt="Printhead prefill at t30">
+                <span class="ph-label slide-label">Prefill t0</span>
+              </div>
+            </div>
+          </div>
+          <div class="body">
+            <div class="meta mono"><span>Research · Guenther Lab/CRAFT</span><span>2024</span></div>
+            <h3>Microfluidic Printhead for Collagen Extrusion</h3>
+            <p>I redesigned the channels of a microfluidic printhead that extrudes aligned collagen sheets, which raised yield by 50%. I also moved its fabrication to 3D printing, 70% more efficient to make, and trained a small model that predicts the flow split with 93% accuracy.</p>
+            <span class="more">More →</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section id="experience">
+    <div class="container about-grid" style="align-items: start;">
+      <div class="reveal" style="position: sticky; top: 130px;">
+        <h2 style="margin-bottom: 22px;">Where I've <em>worked</em></h2>
+        <a href="cv.html" class="btn">Full resume <span class="arrow">→</span></a>
+      </div>
+
+      <div class="timeline">
+        <div class="tl-item current reveal">
+          <div class="when mono">Sep 2026 — Present</div>
+          <h3>Thesis Researcher, Grasping and Manipulation</h3>
+          <div class="where">Robotics and Automation Laboratory, U of T · Prof. Andrew Goldenberg</div>
+        </div>
+        <div class="tl-item reveal">
+          <div class="when mono">Aug 2026 — Sep 2026</div>
+          <h3>Researcher, Tactile Sensing</h3>
+          <div class="where">Institute of Automation, Chinese Academy of Sciences · Prof. Xiaoguang Zhao</div>
+        </div>
+        <div class="tl-item reveal">
+          <div class="when mono">May 2025 — Aug 2026</div>
+          <h3>Junior Designer</h3>
+          <div class="where">Smith + Andersen Consulting Engineering · North York, ON</div>
+        </div>
+        <div class="tl-item reveal">
+          <div class="when mono">May 2024 — Dec 2024</div>
+          <h3>Research Intern, Microfluidic Printhead</h3>
+          <div class="where">Guenther Laboratory, U of T / CRAFT · Prof. Axel Guenther</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container foot-inner">
+      <span>© <span data-year></span> Chenghan Xie · Mechanical Engineering, University of Toronto</span>
+      <div class="foot-links">
+        <a href="projects.html">Projects</a>
+        <a href="cv.html">Resume</a>
+        <a href="https://www.linkedin.com/in/chenghan-xie/" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>

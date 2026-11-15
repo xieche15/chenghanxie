@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects — Chenghan Xie</title>
+  <meta name="description" content="Engineering projects by Chenghan Xie: deep learning for robotic grasping, spiking neural networks for tactile sensing, autonomous rover, custom UAV, hospital HVAC design, microfluidic printhead research and more.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="logo" aria-label="Home">
+        Cheng<span class="tag"></span>
+      </a>
+      <button class="nav-toggle" aria-label="Menu" aria-expanded="false">☰</button>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="projects.html" class="active">Projects</a></li>
+        <li><a href="cv.html">Resume</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <header class="page-hero">
+    <div class="container">
+      <h1>Projects</h1>
+      <p class="lead">Research, industry work, course projects and things I built on my own time.</p>
+    </div>
+  </header>
+
+  <section style="padding-top: 10px;">
+    <div class="container">
+      <div class="filters" role="toolbar" aria-label="Filter projects">
+        <button class="active" data-filter="all">All</button>
+        <button data-filter="robotics">Robotics</button>
+        <button data-filter="research">Research</button>
+        <button data-filter="industry">Industry</button>
+        <button data-filter="mechanical">Mechanical</button>
+        <button data-filter="software">Software &amp; AI</button>
+        <button data-filter="systems">Systems</button>
+      </div>
+
+      <article class="case" id="thesis" data-cat="robotics research software">
+        <div class="case-viz reveal">
+          <div class="figure">
+            <div class="figure-head mono"><span>Robotic grasping in Genesis</span></div>
+            <div class="stage">
+              <img src="images/web/thesis-genesis.jpg" alt="Franka Panda arm in the Genesis simulator with RGB, depth and segmentation camera views of a cube">
+            </div>
+          </div>
+        </div>
+        <div class="case-body reveal reveal-delay-1">
+          <div class="pid mono">Sep 2026 — Present <span class="badge">● Ongoing</span></div>
+          <h2>Deep Learning for Robotic Grasping in Domestic Environments</h2>
+          <p class="summary">My undergraduate thesis at U of T's Robotics and Automation Laboratory (RAL), supervised by Prof. Andrew Goldenberg. I'm building a simulation-based pipeline that takes a Franka Panda arm from raw perception to manipulation of both rigid and deformable household objects.</p>
+          <div class="case-meta">
+            <div><span>Role</span><b>Thesis researcher</b></div>
+            <div><span>Lab</span><b>RAL, U of T</b></div>
+            <div><span>Supervisor</span><b>Prof. A. Goldenberg</b></div>
+          </div>
+          <div class="metrics">
+            <div class="metric"><div class="v">6<span class="unit">-DoF</span></div><div class="k">Grasp poses from Contact-GraspNet</div></div>
+            <div class="metric"><div class="v">2</div><div class="k">Perception stacks benchmarked</div></div>
+            <div class="metric"><div class="v">3</div><div class="k">Escalating task tiers</div></div>
+          </div>
+          <h4>The challenge</h4>
+          <p>Homes are cluttered and unstructured, and many of the objects in them are soft. A robot that can pick up a mug also needs to recognise what it's looking at, judge whether that thing is rigid or deformable, and then plan motions that are collision-free and fast.</p>
+          <h4>What I'm building</h4>
+          <ul>
+            <li><strong>A full perception-to-manipulation pipeline</strong> for a Franka Panda arm in the Genesis simulator.</li>
+            <li><strong>A perception benchmark</strong> comparing Mask R-CNN against zero-shot Grounding DINO + SAM 2 for detection, segmentation and rigid vs. deformable material estimation in cluttered household scenes.</li>
+            <li><strong>Grasping and motion planning:</strong> 6-DoF grasp poses from Contact-GraspNet, turned into collision-free, time-optimal trajectories with OMPL (RRT-Connect) and TOPP-RA.</li>
+            <li><strong>Deformable manipulation</strong> using a U-Net garment keypoint and affordance network, Diffusion Policy, and scripted primitives.</li>
+          </ul>
+          <h4>Evaluation</h4>
+          <p>The pipeline is tested on three task tiers of increasing difficulty: <strong style="color:var(--text);font-weight:500">rigid objects</strong>, then <strong style="color:var(--text);font-weight:500">garments</strong>, then <strong style="color:var(--text);font-weight:500">large deformables</strong> such as making a bed.</p>
+          <div class="tools"><span class="chip">PyTorch</span><span class="chip">Genesis</span><span class="chip">Mask R-CNN</span><span class="chip">Grounding DINO</span><span class="chip">SAM 2</span><span class="chip">Contact-GraspNet</span><span class="chip">OMPL</span><span class="chip">TOPP-RA</span><span class="chip">Diffusion Policy</span></div>
+        </div>
+      </article>
+
+      <article class="case" id="snn" data-cat="research software robotics">
+        <div class="case-viz reveal">
+          <div class="figure">
+            <div class="figure-head mono"><span>Tactile sensing with SNNs</span></div>
+            <div class="stage">
+              <p class="stage-note">Unfortunately, no images can be shared for this project because the research is still in progress and confidential.</p>
+            </div>
+          </div>
+        </div>
+        <div class="case-body reveal reveal-delay-1">
+          <div class="pid mono">Aug — Sep 2026 · CAS Institute of Automation, Beijing</div>
+          <h2>Spiking Neural Networks for Tactile Sensing in Robotic Grasping</h2>
+          <p class="summary">At the Chinese Academy of Sciences' Institute of Automation, supervised by Prof. Xiaoguang Zhao, I proposed and tested spiking neural networks as a faster, event-driven way for a robot to "feel" whether its grasp is stable.</p>
+          <div class="case-meta">
+            <div><span>Institute</span><b>CASIA</b></div>
+            <div><span>Supervisor</span><b>Prof. X. Zhao</b></div>
+            <div><span>Location</span><b>Beijing, China</b></div>
+          </div>
+          <div class="metrics">
+            <div class="metric"><div class="v">0.951</div><div class="k">F1 score, matching the LSTM baseline</div></div>
+            <div class="metric"><div class="v">−50<span class="unit">%</span></div><div class="k">Latency vs. LSTM</div></div>
+            <div class="metric"><div class="v">SNN</div><div class="k">Event-driven paradigm, self-proposed</div></div>
+          </div>
+          <h4>The challenge</h4>
+          <p>A robot needs grasp-stability feedback in real time to react before an object slips. Conventional sequence models like LSTMs work well, but they process dense time steps. Tactile signals are naturally sparse and event-like, which is exactly what spiking networks are built for.</p>
+          <h4>What I did</h4>
+          <ul>
+            <li><strong>Independently proposed and explored</strong> spiking neural networks as an event-driven learning paradigm for tactile perception in robotic grasping.</li>
+            <li><strong>Implemented an SNN baseline</strong> for tactile classification.</li>
+            <li><strong>Matched the LSTM baseline's F1 score of 0.951 with 50% less latency</strong>, which supports using SNNs for real-time grasp-stability feedback.</li>
+          </ul>
+          <h4>Why it matters</h4>
+          <p>The same accuracy at half the latency means a control loop that can react faster. It also connects directly to my thesis work on robotic grasping.</p>
+          <div class="tools"><span class="chip">Python</span><span class="chip">PyTorch</span><span class="chip">Spiking neural networks</span><span class="chip">LSTM</span><span class="chip">Tactile sensing</span></div>
+        </div>
+      </article>
+
+      <article class="case" id="rover" data-cat="robotics">
+        <div class="case-viz reveal">
+          <div class="figure">
+            <div class="figure-head mono"><span>Maze-navigating rover</span></div>
+            <div class="stage">
+              <img src="images/web/rover.jpg" class="cover" alt="The autonomous rover: layered wooden decks with ultrasonic and ToF sensors on 3D-printed mounts, a breadboard and motor drivers, omni wheels and a front gripper">
+            </div>
+          </div>
+        </div>
+        <div class="case-body reveal reveal-delay-1">
+          <div class="pid mono">Sep — Nov 2026 · Team project <span class="badge">● In progress</span></div>
+          <h2>Autonomous Maze-Navigating Rover</h2>
+          <p class="summary">I led a team of four building a fully autonomous rover that starts somewhere unknown in a maze, works out where it is, finds a block, picks it up and delivers it to a target zone, with no human input.</p>
+          <div class="case-meta">
+            <div><span>Role</span><b>Team lead</b></div>
+            <div><span>Team</span><b>4 students</b></div>
+            <div><span>Stack</span><b>C/C++ (Arduino) · Python</b></div>
+          </div>
+          <div class="metrics">
+            <div class="metric"><div class="v">&lt;5<span class="unit">s</span></div><div class="k">To a confident pose from an unknown start</div></div>
+            <div class="metric"><div class="v">&lt;5<span class="unit">°</span></div><div class="k">Heading drift under PID control</div></div>
+            <div class="metric"><div class="v">90<span class="unit">%</span></div><div class="k">Block pickup success</div></div>
+          </div>
+          <h4>The challenge</h4>
+          <p>The rover starts with no map and no idea where it is. It has to localize from its own sensor readings, follow walls without drifting, find a small block, grip it reliably, and then plan a route to the drop zone.</p>
+          <h4>What I did</h4>
+          <ul>
+            <li><strong>Led the team of 4</strong> to build a rover that fuses ultrasonic, ToF, IMU, IR and wheel-encoder data to localize from an unknown start, navigate the maze, and retrieve and deliver the target block.</li>
+            <li><strong>Implemented particle filter localization</strong> that converges to a confident pose in under 5 s, paired with A* path planning.</li>
+            <li><strong>Developed closed-loop wall-following and heading control</strong> using PID on differential sensor readings and encoder feedback, holding heading drift under 5°.</li>
+            <li><strong>Designed the gripper sensing and grasp sequence</strong> around a VL53L0X ToF sensor, reaching 90% block pickup success.</li>
+          </ul>
+          <div class="tools"><span class="chip">C/C++</span><span class="chip">Arduino</span><span class="chip">Python</span><span class="chip">Particle filter</span><span class="chip">A*</span><span class="chip">PID</span><span class="chip">Sensor fusion</span><span class="chip">VL53L0X ToF</span></div>
+        </div>
+      </article>
+
+      <article class="case" id="uav" data-cat="robotics mechanical">
+        <div class="case-viz reveal">
+          <div class="figure">
+            <div class="figure-head mono"><span>Custom FPV drone</span></div>
+            <div class="stage">
+              <img src="images/web/uav-drone.jpg" class="cover" alt="The custom FPV drone on a countertop, front view with camera and four motors">
+            </div>
+          </div>
+        </div>
+        <div class="case-body reveal reveal-delay-1">
+          <div class="pid mono">Jan — Jun 2026 · Personal project</div>
+          <h2>Custom UAV Design &amp; Integration</h2>
+          <p class="summary">A custom FPV drone that I designed, integrated and tuned myself, then validated through structured flight testing until it flew stably while carrying a 500 g payload.</p>
+          <div class="case-meta">
+            <div><span>Role</span><b>Designer &amp; builder</b></div>
+            <div><span>Controller</span><b>STM32 · Betaflight</b></div>
+            <div><span>Analysis</span><b>MATLAB / Simulink</b></div>
+          </div>
+          <div class="metrics">
+            <div class="metric"><div class="v">−30<span class="unit">%</span></div><div class="k">Roll/pitch oscillation vs. baseline tune</div></div>
+            <div class="metric"><div class="v">−25<span class="unit">%</span></div><div class="k">Settling time</div></div>
+            <div class="metric"><div class="v">500<span class="unit">g</span></div><div class="k">Payload carried in stable flight</div></div>
+          </div>
+          <h4>The challenge</h4>
+          <p>To fly cleanly, especially with a payload changing the dynamics, the attitude controller has to be tuned against real flight data.</p>
+          <h4>What I did</h4>
+          <ul>
+            <li><strong>Designed the airframe platform</strong> and integrated the STM32 flight controller, ESC, motors, power distribution and sensors.</li>
+            <li><strong>Implemented and tuned PID attitude control</strong> through iterative flight testing and gyro-data analysis. This <strong>reduced roll/pitch oscillation by 30%</strong> and <strong>settling time by 25%</strong> compared with the baseline tune.</li>
+            <li><strong>Validated performance</strong> with step-response and disturbance testing, reaching <strong>stable flight carrying a 500 g payload</strong>.</li>
+          </ul>
+          <div class="tools"><span class="chip">SolidWorks</span><span class="chip">Betaflight</span><span class="chip">MATLAB</span><span class="chip">Simulink</span><span class="chip">STM32</span><span class="chip">PID control</span><span class="chip">Soldering</span></div>
+        </div>
+      </article>
+
+      <article class="case" id="hospital" data-cat="industry systems">
+        <div class="case-viz reveal">
+          <div class="figure">
+            <div class="figure-head mono"><span>QEII hospital expansion</span></div>
+            <div class="stage">
+              <img src="images/web/qeii.jpg" class="cover" alt="Rendering of the QEII Health Infrastructure Expansion Project in Halifax">
+            </div>
+          </div>
+        </div>
+        <div class="case-body reveal reveal-delay-1">
+          <div class="pid mono">May 2025 — Aug 2026 · Smith + Andersen</div>
+          <h2>QEII Health Infrastructure Expansion Project</h2>
+          <p class="summary">Mechanical design for Atlantic Canada's largest mission-critical healthcare project, during my 16-month role as a Junior Designer at Smith + Andersen Consulting Engineering.</p>
+          <div class="case-meta">
+            <div><span>Role</span><b>Junior Designer</b></div>
+            <div><span>Firm</span><b>Smith + Andersen</b></div>
+            <div><span>Codes</span><b>CSA · ASHRAE</b></div>
+          </div>
+          <div class="metrics">
+            <div class="metric"><div class="v">5,000<span class="unit">+</span></div><div class="k">Spaces covered by load calculations</div></div>
+            <div class="metric"><div class="v">20<span class="unit">%</span></div><div class="k">Air-handling &amp; central-plant energy efficiency gain</div></div>
+            <div class="metric"><div class="v">$10M<span class="unit">+</span></div><div class="k">Equipment procurement advised on</div></div>
+          </div>
+          <h4>The challenge</h4>
+          <p>Hospitals are some of the most demanding buildings to design mechanical systems for. They run 24/7, critical environments need tight temperature and humidity control, infection control is non-negotiable, and every equipment choice comes with decades of operating cost.</p>
+          <h4>What I did</h4>
+          <ul>
+            <li><strong>Delivered mechanical design</strong> for the QEII HIEP, including <strong>load calculations across more than 5,000 spaces</strong> and <strong>psychrometric analyses</strong> for critical environments.</li>
+            <li><strong>Improved air-handling and central-plant energy efficiency by 20%.</strong></li>
+            <li><strong>Advised on more than $10M in equipment procurement</strong> through technical evaluations that balanced code compliance (CSA, ASHRAE), budget, space constraints and lifecycle cost.</li>
+            <li><strong>Contributed to infection-control design</strong> through HVAC pressurization between high-risk and low-risk zones.</li>
+          </ul>
+          <h4>Why pressurization matters</h4>
+          <p>Protected rooms such as operating rooms are held at positive pressure, so air pushes out of them. Isolation rooms are held at negative pressure, so air is pulled in and exhausted. Getting that cascade right is how a building keeps airborne contaminants moving in only one direction.</p>
+          <div class="tools"><span class="chip">Load calculations</span><span class="chip">Psychrometrics</span><span class="chip">CSA</span><span class="chip">ASHRAE</span><span class="chip">Revit</span><span class="chip">AutoCAD</span><span class="chip">Lifecycle costing</span></div>
+        </div>
+      </article>
+
+      <article class="case" id="printhead" data-cat="research software mechanical">
+        <div class="case-viz reveal">
+          <div class="figure">
+            <div class="figure-head mono"><span>3D-printed vs. PDMS printhead, and prefill</span></div>
+            <div class="stage seq">
+              <div class="ph-grid">
+                <div class="ph-compare">
+                  <div class="ph-cell">
+                    <img src="images/web/printhead-3d.jpg" alt="3D-printed clear microfluidic printhead with a bifurcating channel manifold">
+                    <span class="ph-label">3D-printed</span>
+                  </div>
+                  <div class="ph-cell">
+                    <img src="images/web/printhead-pdms.jpg" alt="PDMS microfluidic printhead with the same bifurcating channel manifold and a green inlet tube">
+                    <span class="ph-label">PDMS</span>
+                  </div>
+                </div>
+                <div class="ph-cell slides" aria-label="Prefill sequence from t0 to t30">
+                  <img src="images/web/prefill-t0.jpg" class="on" data-label="Prefill t0" alt="Printhead prefill at t0">
+                  <img src="images/web/prefill-t8.jpg" data-label="Prefill t8" alt="Printhead prefill at t8">
+                  <img src="images/web/prefill-t12.jpg" data-label="Prefill t12" alt="Printhead prefill at t12">
+                  <img src="images/web/prefill-t20.jpg" data-label="Prefill t20" alt="Printhead prefill at t20">
+                  <img src="images/web/prefill-t30.jpg" data-label="Prefill t30" alt="Printhead prefill at t30">
+                  <span class="ph-label slide-label">Prefill t0</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="case-body reveal reveal-delay-1">
+          <div class="pid mono">May — Dec 2024 · Guenther Lab, U of T / CRAFT</div>
+          <h2>Microfluidic Printhead for Aligned Collagen Sheets</h2>
+          <p class="summary">I optimized printhead geometry and extrusion parameters for fabricating aligned collagen sheets. The work was funded by the 2024 MIE Summer Research Award ($7,500).</p>
+          <div class="case-meta">
+            <div><span>Role</span><b>Research Intern</b></div>
+            <div><span>Supervisor</span><b>Prof. A. Guenther</b></div>
+            <div><span>Output</span><b>UnERD poster, 2024</b></div>
+          </div>
+          <div class="metrics">
+            <div class="metric"><div class="v">+50<span class="unit">%</span></div><div class="k">Extrusion yield vs. previous generation</div></div>
+            <div class="metric"><div class="v">+70<span class="unit">%</span></div><div class="k">Manufacturing efficiency</div></div>
+            <div class="metric"><div class="v">93<span class="unit">%</span></div><div class="k">ML flow-prediction accuracy</div></div>
+          </div>
+          <h4>The challenge</h4>
+          <p>The previous printhead had filling and flow-distribution problems, which lead to unaligned collagen sheets. The old device was also slow to make since it was PDMS based, fabricated using soft lithography.</p>
+          <h4>What I did</h4>
+          <ul>
+            <li><strong>Redesigned the microchannel geometry</strong> in SolidWorks and AutoCAD to fix the filling and flow-distribution issues, <strong>improving extrusion yield by 50%</strong> over the previous design.</li>
+            <li><strong>Developed and experimentally validated a microfluidic 3D printing process</strong> to replace soft lithography, <strong>increasing manufacturing efficiency by 70%</strong>.</li>
+            <li><strong>Built a supervised machine-learning model</strong> in Python that predicts flow distribution with <strong>93% accuracy</strong>.</li>
+          </ul>
+          <h4>Presentation</h4>
+          <p><strong style="color:var(--text);font-weight:500">C. Xie</strong>, W. Gao, A. Guenther, "Optimizing Microfluidic Printhead Design and Extrusion Methods for Aligned Collagen Sheets." Poster, Undergraduate Engineering Research Day, University of Toronto, 2024.</p>
+          <div class="tools"><span class="chip">SolidWorks</span><span class="chip">AutoCAD</span><span class="chip">Python</span><span class="chip">Supervised ML</span><span class="chip">DLP 3D printing</span><span class="chip">Soft lithography</span></div>
+        </div>
+      </article>
+
+      <article class="case" id="printer" data-cat="mechanical">
+        <div class="case-viz reveal">
+          <div class="figure">
+            <div class="figure-head mono"><span>Assembly drawing, render and extruder close-up</span></div>
+            <div class="stage seq">
+              <img class="seq-full" src="images/web/printer-1-assembly.jpg" alt="SolidWorks full-assembly drawing of the printer with numbered parts: build frame, extruder/hot-end, X, Y and Z axes, print bed and rubber pads">
+              <div class="seq-row">
+                <img src="images/web/printer-2-render.jpg" alt="SolidWorks render of the multi-material 3D printer: cube frame, dual extruders on an X/Y gantry and a lead-screw driven Z bed">
+                <img src="images/web/printer-3-closeup.jpg" alt="Close-up render of the extruder carriage, lead screw and stepper motors on the X axis">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="case-body reveal reveal-delay-1">
+          <div class="pid mono">Sep — Dec 2023 · Design course project</div>
+          <h2>Multi-Material 3D Printer Design</h2>
+          <p class="summary">I led a four-person team designing a complete, cost-effective multi-material 3D printer in SolidWorks.</p>
+          <div class="case-meta">
+            <div><span>Role</span><b>Team lead</b></div>
+            <div><span>Team</span><b>4 students</b></div>
+            <div><span>Result</span><b>90% final grade</b></div>
+          </div>
+          <div class="metrics">
+            <div class="metric"><div class="v">4</div><div class="k">Students directed</div></div>
+            <div class="metric"><div class="v">90<span class="unit">%</span></div><div class="k">Final grade</div></div>
+            <div class="metric"><div class="v">3</div><div class="k">Sub-assemblies owned</div></div>
+          </div>
+          <h4>The challenge</h4>
+          <p>Printing more than one material means multiple extrusion paths, tight nozzle alignment and a stiff, accurate gantry, all while keeping cost and material sustainability under control.</p>
+          <h4>What I did</h4>
+          <ul>
+            <li><strong>Directed the team</strong> to produce an efficient, effective multi-material printer design in SolidWorks.</li>
+            <li><strong>Specifically designed</strong> the extruder, the nozzle assembly and the X- and Y-axis assemblies.</li>
+            <li><strong>Researched material sustainability</strong> and produced a complete cost analysis so the printer would be cost-effective.</li>
+            <li><strong>Made the technical drawings and 3D models</strong> for the components and refined the full assembly.</li>
+          </ul>
+          <div class="tools"><span class="chip">SolidWorks</span><span class="chip">Technical drawing</span><span class="chip">Cost analysis</span><span class="chip">Team leadership</span></div>
+        </div>
+      </article>
+
+      <article class="case" id="cnn" data-cat="software">
+        <div class="case-viz reveal">
+          <div class="figure">
+            <div class="figure-head mono"><span>Network architecture &amp; output</span></div>
+            <div class="stage">
+              <svg data-view="arch" viewBox="0 0 400 300" aria-label="CNN architecture: 3x224x224 input, 3x3 conv to 128 channels with ReLU, 4x4 max pool, 3x3 conv to 64 channels with ReLU, 2x2 max pool, flatten to 43,264 features, dropout 0.2, linear layer to 3 burn-degree classes">
+                <defs>
+                  <linearGradient id="skin" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#cfcfcf"/><stop offset="1" stop-color="#4a4a4a"/></linearGradient>
+                  <marker id="cnn-arrow" viewBox="0 0 8 8" refX="8" refY="4" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L8 4 L0 8 z" fill="#bfbfbf"/></marker>
+                </defs>
+                <text class="sv-text-c" x="14" y="24">PYTORCH · 3-CLASS BURN DEGREE CLASSIFIER</text>
+
+                <rect x="14" y="70" width="50" height="50" fill="url(#skin)" opacity=".85" stroke="#f2f2f2"/>
+                <g fill="rgba(255,255,255,.08)" stroke="#bfbfbf" stroke-width="1.2">
+                  <rect x="100" y="58" width="12" height="64"/><rect x="105" y="63" width="12" height="64"/><rect x="110" y="68" width="12" height="64"/>
+                  <rect x="175" y="80" width="10" height="34"/><rect x="179" y="84" width="10" height="34"/><rect x="183" y="88" width="10" height="34"/>
+                  <rect x="251" y="81" width="8" height="30"/><rect x="256" y="86" width="8" height="30"/>
+                  <rect x="325" y="88" width="7" height="16"/><rect x="329" y="92" width="7" height="16"/>
+                </g>
+                <g fill="none" stroke="#bfbfbf" stroke-width="1.2" marker-end="url(#cnn-arrow)"><path d="M64 95 H99"/><path d="M122 99 H175"/><path d="M193 103 H251"/><path d="M264 101 H325"/></g>
+                <g class="sv-text" style="font-size:8px" text-anchor="middle"><text x="111" y="50">ReLU</text><text x="258" y="73">ReLU</text></g>
+                <g class="sv-text-a" style="font-size:8.5px" text-anchor="middle">
+                  <text x="39" y="150">INPUT</text><text x="111" y="150">CONV 3×3</text><text x="184" y="150">POOL 4×4</text><text x="258" y="150">CONV 3×3</text><text x="331" y="150">POOL 2×2</text>
+                </g>
+                <g class="sv-text" style="font-size:8px" text-anchor="middle">
+                  <text x="39" y="163">3×224×224</text><text x="111" y="163">128×222×222</text><text x="184" y="163">128×55×55</text><text x="258" y="163">64×53×53</text><text x="331" y="163">64×26×26</text>
+                </g>
+
+                <path fill="none" stroke="#bfbfbf" stroke-width="1.2" marker-end="url(#cnn-arrow)" d="M336 100 H384 V184 H29 V205"/>
+
+                <rect x="24" y="206" width="10" height="56" fill="rgba(255,255,255,.08)" stroke="#bfbfbf" stroke-width="1.2"/>
+                <g stroke="#5e5e5e"><line x1="24" y1="214" x2="34" y2="214"/><line x1="24" y1="222" x2="34" y2="222"/><line x1="24" y1="230" x2="34" y2="230"/><line x1="24" y1="238" x2="34" y2="238"/><line x1="24" y1="246" x2="34" y2="246"/><line x1="24" y1="254" x2="34" y2="254"/></g>
+                <path fill="none" stroke="#bfbfbf" stroke-width="1.2" marker-end="url(#cnn-arrow)" d="M34 234 H113"/>
+                <g stroke="rgba(255,255,255,.22)">
+                  <path d="M125 207 L209 213 M125 207 L209 235 M125 207 L209 257 M125 229 L209 213 M125 229 L209 235 M125 229 L209 257 M125 251 L209 213 M125 251 L209 235 M125 251 L209 257"/>
+                </g>
+                <g fill="#0a0a0a" stroke="#bfbfbf">
+                  <circle cx="120" cy="207" r="5"/><circle cx="120" cy="229" r="5"/><circle cx="120" cy="251" r="5"/>
+                </g>
+                <g fill="none" stroke="#5e5e5e" stroke-dasharray="2 2">
+                  <circle cx="120" cy="218" r="5"/><circle cx="120" cy="240" r="5"/><circle cx="120" cy="262" r="5"/>
+                </g>
+                <g fill="#0a0a0a" stroke="#f2f2f2"><circle cx="215" cy="213" r="6"/><circle cx="215" cy="235" r="6"/><circle cx="215" cy="257" r="6"/></g>
+                <g class="sv-text"><text x="228" y="216">1°</text><text x="228" y="238">2°</text><text x="228" y="260">3°</text></g>
+                <rect x="246" y="209" width="96" height="8" fill="#ffffff"/>
+                <rect x="246" y="231" width="21" height="8" fill="#a6a6a6"/>
+                <rect x="246" y="253" width="2" height="8" fill="#6a6a6a"/>
+                <g style="font-size:8.5px"><text class="sv-text-a" x="348" y="216">81.1%</text><text class="sv-text" x="273" y="238">18.1%</text><text class="sv-text" x="254" y="260">0.9%</text></g>
+
+                <g class="sv-text-a" style="font-size:8.5px" text-anchor="middle">
+                  <text x="29" y="282">FLATTEN</text><text x="118" y="282">DROPOUT</text><text x="172" y="282">FC</text><text x="296" y="282">OUTPUT</text>
+                </g>
+                <g class="sv-text" style="font-size:8px" text-anchor="middle">
+                  <text x="29" y="294">43,264</text><text x="118" y="294">p=0.2</text><text x="172" y="294">43,264→3</text><text x="296" y="294">burn degree</text>
+                </g>
+              </svg>
+              <img data-view="out" src="images/ai-model.png" class="cover" style="display:none; object-fit: contain; padding: 10px;" alt="Burn Degree Classifier output in Colab: uploaded wound image classified as 1st degree burn with 81.1% confidence">
+            </div>
+            <div class="viz-tabs"><button class="active" data-show="arch">Architecture</button><button data-show="out">Real output</button></div>
+          </div>
+        </div>
+        <div class="case-body reveal reveal-delay-1">
+          <div class="pid mono">May — Sep 2023 · Team project</div>
+          <h2>Burn Degree Recognition AI Model</h2>
+          <p class="summary">A convolutional neural network that classifies burn wounds as 1st, 2nd or 3rd degree from images. Its accuracy is comparable to a published research benchmark.</p>
+          <div class="case-meta">
+            <div><span>Role</span><b>Project manager</b></div>
+            <div><span>Framework</span><b>PyTorch</b></div>
+            <div><span>Task</span><b>Burn degree classification</b></div>
+          </div>
+          <div class="metrics">
+            <div class="metric"><div class="v">77<span class="unit">%</span></div><div class="k">Model accuracy, on par with paper benchmark</div></div>
+            <div class="metric"><div class="v">−30<span class="unit">%</span></div><div class="k">Runtime after optimization</div></div>
+            <div class="metric"><div class="v">3</div><div class="k">Burn-degree classes</div></div>
+          </div>
+          <h4>The challenge</h4>
+          <p>Judging burn depth matters for treatment, but it's subjective, and good labelled medical images are scarce. The model had to generalize from a limited dataset without overfitting.</p>
+          <h4>What I did</h4>
+          <ul>
+            <li><strong>Managed the group project</strong> from scoping through to the final presentation.</li>
+            <li><strong>Designed and coded the entire CNN</strong> and helped build the data augmentation pipeline.</li>
+            <li><strong>Used transfer learning and hyperparameter tuning</strong> to improve performance while <strong>cutting runtime by 30%</strong>.</li>
+            <li><strong>Reached 77% accuracy</strong>, comparable to the benchmark set by a professional research paper.</li>
+          </ul>
+          <div class="tools"><span class="chip">Python</span><span class="chip">PyTorch</span><span class="chip">Google Colab</span><span class="chip">CNN</span><span class="chip">Transfer learning</span><span class="chip">Data augmentation</span></div>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="container foot-inner">
+      <span>© <span data-year></span> Chenghan Xie · Mechanical Engineering, University of Toronto</span>
+      <div class="foot-links">
+        <a href="index.html">Home</a>
+        <a href="cv.html">Resume</a>
+        <a href="https://www.linkedin.com/in/chenghan-xie/" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
