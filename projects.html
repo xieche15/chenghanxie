@@ -57,29 +57,29 @@
         <div class="case-body reveal reveal-delay-1">
           <div class="pid mono">Sep 2026 — Present <span class="badge">● Ongoing</span></div>
           <h2>Deep Learning for Robotic Grasping in Domestic Environments</h2>
-          <p class="summary">My undergraduate thesis at U of T's Robotics and Automation Laboratory (RAL), supervised by Prof. Andrew Goldenberg. I'm building a simulation-based pipeline that takes a Franka Panda arm from raw perception to manipulation of both rigid and deformable household objects.</p>
+          <p class="summary">My undergraduate thesis at U of T's Robotics and Automation Laboratory (RAL), supervised by Prof. Andrew Goldenberg. I built a simulated pick-and-place pipeline for a Franka Panda arm that pins every failure on a specific stage, so I can see which part of the system actually breaks and why.</p>
           <div class="case-meta">
             <div><span>Role</span><b>Thesis researcher</b></div>
             <div><span>Lab</span><b>RAL, U of T</b></div>
             <div><span>Supervisor</span><b>Prof. A. Goldenberg</b></div>
           </div>
           <div class="metrics">
-            <div class="metric"><div class="v">6<span class="unit">-DoF</span></div><div class="k">Grasp poses from Contact-GraspNet</div></div>
-            <div class="metric"><div class="v">3</div><div class="k">Perception approaches benchmarked</div></div>
-            <div class="metric"><div class="v">3</div><div class="k">Escalating task tiers</div></div>
+            <div class="metric"><div class="v">2,100</div><div class="k">Paired, seeded YCB trials</div></div>
+            <div class="metric"><div class="v">85→95<span class="unit">%</span></div><div class="k">Heavy-object success with slip feedback</div></div>
+            <div class="metric"><div class="v">−40<span class="unit">%</span></div><div class="k">Median grip force</div></div>
           </div>
           <h4>The challenge</h4>
-          <p>Homes are cluttered and unstructured, and many of the objects in them are soft. A robot that can pick up a mug also needs to recognise what it's looking at, judge whether that thing is rigid or deformable, and then plan motions that are collision-free and fast.</p>
-          <h4>What I'm building</h4>
+          <p>Homes are cluttered and unstructured. When a robot fails to pick something up, it's usually unclear whether it saw the wrong thing, chose a bad grasp, or held on too loosely. Without knowing which, it's hard to know what to fix.</p>
+          <h4>What I found</h4>
           <ul>
-            <li><strong>A modular perception-to-manipulation benchmark</strong> for a Franka Panda arm in the Genesis simulator, which traces each failed pick-and-place to perception, grasp planning or control across 1,000+ seeded YCB trials.</li>
-            <li><strong>A perception benchmark</strong> comparing oracle, classical and zero-shot Grounding DINO + SAM 2 segmentation. Learned perception matches the oracle on single objects, but success drops from 92% to 74–84% in clutter.</li>
-            <li><strong>Grasp planning:</strong> antipodal grasps beat simple box grasps by 10 percentage points, compared against 6-DoF grasp poses from Contact-GraspNet.</li>
-            <li><strong>Closed-loop grip control:</strong> slip feedback raises grasp success from 85% to 95% under randomized object mass and friction.</li>
+            <li><strong>A modular perception-to-manipulation pipeline</strong> for a Franka Panda in the Genesis simulator that attributes each pick-and-place failure to perception, grasp planning or grip control, across 2,100 paired, seeded YCB trials.</li>
+            <li><strong>Learned perception fails in clutter by picking the wrong object</strong>, not by segmenting it poorly. With zero-shot Grounding DINO + SAM 2, success fell from 92% to 72% with five objects, while classical depth-based perception held 86–92%.</li>
+            <li><strong>Why Contact-GraspNet trails analytic antipodal grasps</strong> (73% vs 90%): its failed grasps landed a median 24–36 mm off the object's center and slipped during transport.</li>
+            <li><strong>A slip-feedback grip controller</strong> using simulated tactile and contact sensors raised success on heavy objects from 85% to 95% under randomized mass and friction, with about 40% less median grip force.</li>
           </ul>
           <h4>Next steps</h4>
           <p>The thesis is still in progress. Next I'm adding collision-free, time-optimal motion planning with OMPL and TOPP-RA, then extending the pipeline from <strong style="color:var(--text);font-weight:500">rigid objects</strong> to <strong style="color:var(--text);font-weight:500">garments</strong> and <strong style="color:var(--text);font-weight:500">large deformables</strong> such as making a bed.</p>
-          <div class="tools"><span class="chip">PyTorch</span><span class="chip">Genesis</span><span class="chip">Grounding DINO</span><span class="chip">SAM 2</span><span class="chip">Contact-GraspNet</span><span class="chip">OMPL</span><span class="chip">TOPP-RA</span><span class="chip">Diffusion Policy</span></div>
+          <div class="tools"><span class="chip">PyTorch</span><span class="chip">Genesis</span><span class="chip">Grounding DINO</span><span class="chip">SAM 2</span><span class="chip">Contact-GraspNet</span><span class="chip">OMPL</span><span class="chip">TOPP-RA</span><span class="chip">YCB objects</span><span class="chip">Tactile sensing</span></div>
         </div>
       </article>
 

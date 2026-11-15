@@ -64,8 +64,9 @@
 
               <header class="tex-heading">
                 <h2>Chenghan Xie</h2>
-                <p></span> <a href="mailto:cxie0923@gmail.com">cxie0923@gmail.com</a> <span class="bar">|</span>
-                  <a href="https://www.linkedin.com/in/chenghan-xie/" target="_blank" rel="noopener">linkedin.com/in/chenghan-xie</a></p>
+                <p><a href="mailto:cxie0923@gmail.com">cxie0923@gmail.com</a> <span class="bar">|</span>
+                  <a href="https://www.linkedin.com/in/chenghan-xie/" target="_blank" rel="noopener">linkedin.com/in/chenghan-xie</a> <span class="bar">|</span>
+                  <a href="https://xieche15.github.io/chenghanxie" target="_blank" rel="noopener">xieche15.github.io/chenghanxie</a></p>
               </header>
 
               <h3 class="tex-section">Education</h3>
@@ -85,18 +86,19 @@
               <div class="tex-list">
                 <div class="tex-sub">
                   <div class="row sm"><b>Deep Learning for Robotic Grasping in Domestic Environments</b><span>Sep 2026 – Current</span></div>
-                  <div class="row sm"><i>Thesis, Robotics and Automation Laboratory (RAL) – Supervised by Prof. Andrew Goldenberg</i><i>Toronto, ON</i></div>
+                  <div class="row sm"><i>Thesis, Robotics and Automation Laboratory (RAL) – Prof. Andrew Goldenberg</i><i>Toronto, ON</i></div>
                   <ul>
-                    <li>Building a modular perception-to-manipulation benchmark for a Franka Panda in Genesis, attributing pick-and-place failures to perception, grasp planning, or control across 1,000+ seeded YCB trials</li>
-                    <li>Benchmarked oracle, classical, and zero-shot Grounding DINO + SAM 2 segmentation; learned perception matches the oracle on single objects but drops from 92% to 74–84% in clutter</li>
-                    <li>Compared antipodal (+10 percentage points over box grasps) and Contact-GraspNet 6-DoF grasp planning; closed-loop slip-feedback grip control raises success from 85% to 95% under randomized mass and friction</li>
+                    <li>Built a modular perception-to-manipulation pipeline for a Franka Panda in Genesis that attributes each pick-and-place failure to perception, grasp planning, or grip control across 2,100 paired, seeded YCB trials</li>
+                    <li>Showed that zero-shot Grounding DINO + SAM 2 fails in clutter by picking the wrong object, not by segmenting poorly: success fell from 92% to 72% with 5 objects while classical depth-based perception held 86–92%</li>
+                    <li>Diagnosed Contact-GraspNet's gap to analytic antipodal grasps (73% vs 90%): failed grasps landed a median 24–36 mm off the object's center and slipped in transport</li>
+                    <li>Designed a slip-feedback grip controller using simulated tactile and contact sensors that raised success on heavy objects from 85% to 95% under randomized mass and friction, with about 40% less median grip force</li>
                     <li>Next: OMPL/TOPP-RA motion planning and extension to garments and large deformables (e.g., bed-making)</li>
                   </ul>
                 </div>
 
                 <div class="tex-sub">
                   <div class="row sm"><b>Spiking Neural Networks for Tactile Sensing in Robotic Grasping</b><span>Aug 2026 – Sep 2026</span></div>
-                  <div class="row sm"><i>Chinese Academy of Sciences, Institute of Automation – Supervised by Prof. Xiaoguang Zhao</i><i>Beijing, China</i></div>
+                  <div class="row sm"><i>Summer Research, Chinese Academy of Sciences, Institute of Automation – Prof. Xiaoguang Zhao</i><i>Beijing, China</i></div>
                   <ul>
                     <li>Independently proposed and explored spiking neural networks (SNNs) as an event-driven learning paradigm for tactile perception in robotic grasping</li>
                     <li>Implemented an SNN baseline for tactile classification, matching the F1 score of an LSTM baseline (0.951) with 50% less latency, supporting SNNs for real time grasp stability feedback</li>
@@ -105,9 +107,9 @@
 
                 <div class="tex-sub">
                   <div class="row sm"><b>Microfluidic Printhead Design for Aligned Collagen Fabrication</b><span>May 2024 – Dec 2024</span></div>
-                  <div class="row sm"><i>Research Intern, Guenther Laboratory / CRAFT – Supervised by Prof. Axel Guenther</i><i>Toronto, ON</i></div>
+                  <div class="row sm"><i>Research Intern, Guenther Laboratory / CRAFT – Prof. Axel Guenther</i><i>Toronto, ON</i></div>
                   <ul>
-                    <li>Redesigned microchannel geometry to resolve filling and flow-distribution issues, improving extrusion yield by 50% over the previous generation design</li>
+                    <li>Redesigned microchannel geometry to resolve filling and flow-distribution issues, improving extrusion yield by 50%</li>
                     <li>Developed and experimentally validated a microfluidic 3D printing process, increasing manufacturing efficiency by 70%</li>
                     <li>Developed a supervised machine learning model in Python to predict flow distribution, achieving 93% prediction accuracy</li>
                   </ul>
@@ -118,7 +120,7 @@
                   <ul>
                     <li>Led a team of 4 to build a fully autonomous rover that fuses ultrasonic, ToF, IMU, IR, and wheel encoder data to localize from an unknown start, navigate a maze, and retrieve and deliver a target block</li>
                     <li>Implemented particle filter localization, converging to a confident pose in under 5&#8201;s, paired with A* path planning</li>
-                    <li>Developed closed loop wall-following and heading control using PID on differential sensor readings and encoder feedback, holding heading drift under 5°</li>
+                    <li>Implemented PID wall-following and heading control using differential ultrasonic feedback, holding heading drift under 5°</li>
                     <li>Designed gripper sensing and grasp sequence around a VL53L0X ToF sensor, achieving 90% block pickup success</li>
                   </ul>
                 </div>
@@ -149,7 +151,7 @@
               <div class="tex-list">
                 <p class="tex-skills">
                   <b>Programming</b>: Python, C/C++, MATLAB, JavaScript
-                  <b>Robotics</b>: PyTorch, ROS 2, OMPL, Genesis, Simulink, Arduino
+                  <b>Robotics</b>: PyTorch, ROS 2, OMPL, Genesis, Simulink, Arduino<br>
                   <b>Mechanical Design</b>: SolidWorks, Creo, Fusion 360, ANSYS, AutoCAD, Revit, GD&amp;T
                   <b>Languages</b>: English, Mandarin
                 </p>
@@ -157,8 +159,8 @@
 
               <h3 class="tex-section">Publications &amp; Presentations</h3>
               <div class="tex-list">
-                <p class="tex-pub"><b>C. Xie</b>, W. Gao, A. Guenther, “Optimizing Microfluidic Printhead Design and Extrusion Methods for Aligned Collagen Sheets”
-                  <i>Undergraduate Engineering Research Day, University of Toronto</i>, Toronto, ON, [Aug 2024]. (Poster)</p>
+                <p class="tex-pub"><b>C. Xie</b>, W. Gao, A. Guenther, “Optimizing Microfluidic Printhead Design and Extrusion Methods for Aligned Collagen Sheets,”
+                  <i>Undergraduate Engineering Research Day, University of Toronto</i>, Toronto, ON, Aug 2024. (Poster)</p>
               </div>
 
             </article>
