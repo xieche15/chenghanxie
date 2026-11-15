@@ -65,28 +65,27 @@
           </div>
           <div class="metrics">
             <div class="metric"><div class="v">6<span class="unit">-DoF</span></div><div class="k">Grasp poses from Contact-GraspNet</div></div>
-            <div class="metric"><div class="v">2</div><div class="k">Perception stacks benchmarked</div></div>
+            <div class="metric"><div class="v">3</div><div class="k">Perception approaches benchmarked</div></div>
             <div class="metric"><div class="v">3</div><div class="k">Escalating task tiers</div></div>
           </div>
           <h4>The challenge</h4>
           <p>Homes are cluttered and unstructured, and many of the objects in them are soft. A robot that can pick up a mug also needs to recognise what it's looking at, judge whether that thing is rigid or deformable, and then plan motions that are collision-free and fast.</p>
           <h4>What I'm building</h4>
           <ul>
-            <li><strong>A full perception-to-manipulation pipeline</strong> for a Franka Panda arm in the Genesis simulator.</li>
-            <li><strong>A perception benchmark</strong> comparing Mask R-CNN against zero-shot Grounding DINO + SAM 2 for detection, segmentation and rigid vs. deformable material estimation in cluttered household scenes.</li>
-            <li><strong>Grasping and motion planning:</strong> 6-DoF grasp poses from Contact-GraspNet, turned into collision-free, time-optimal trajectories with OMPL (RRT-Connect) and TOPP-RA.</li>
-            <li><strong>Deformable manipulation</strong> using a U-Net garment keypoint and affordance network, Diffusion Policy, and scripted primitives.</li>
+            <li><strong>A modular perception-to-manipulation benchmark</strong> for a Franka Panda arm in the Genesis simulator, which traces each failed pick-and-place to perception, grasp planning or control across 1,000+ seeded YCB trials.</li>
+            <li><strong>A perception benchmark</strong> comparing oracle, classical and zero-shot Grounding DINO + SAM 2 segmentation. Learned perception matches the oracle on single objects, but success drops from 92% to 74–84% in clutter.</li>
+            <li><strong>Grasp planning:</strong> antipodal grasps beat simple box grasps by 10 percentage points, compared against 6-DoF grasp poses from Contact-GraspNet.</li>
+            <li><strong>Closed-loop grip control:</strong> slip feedback raises grasp success from 85% to 95% under randomized object mass and friction.</li>
           </ul>
-          <h4>Evaluation</h4>
-          <p>The pipeline is tested on three task tiers of increasing difficulty: <strong style="color:var(--text);font-weight:500">rigid objects</strong>, then <strong style="color:var(--text);font-weight:500">garments</strong>, then <strong style="color:var(--text);font-weight:500">large deformables</strong> such as making a bed.</p>
-          <div class="tools"><span class="chip">PyTorch</span><span class="chip">Genesis</span><span class="chip">Mask R-CNN</span><span class="chip">Grounding DINO</span><span class="chip">SAM 2</span><span class="chip">Contact-GraspNet</span><span class="chip">OMPL</span><span class="chip">TOPP-RA</span><span class="chip">Diffusion Policy</span></div>
+          <h4>Next steps</h4>
+          <p>The thesis is still in progress. Next I'm adding collision-free, time-optimal motion planning with OMPL and TOPP-RA, then extending the pipeline from <strong style="color:var(--text);font-weight:500">rigid objects</strong> to <strong style="color:var(--text);font-weight:500">garments</strong> and <strong style="color:var(--text);font-weight:500">large deformables</strong> such as making a bed.</p>
+          <div class="tools"><span class="chip">PyTorch</span><span class="chip">Genesis</span><span class="chip">Grounding DINO</span><span class="chip">SAM 2</span><span class="chip">Contact-GraspNet</span><span class="chip">OMPL</span><span class="chip">TOPP-RA</span><span class="chip">Diffusion Policy</span></div>
         </div>
       </article>
 
       <article class="case" id="snn" data-cat="research software robotics">
         <div class="case-viz reveal">
           <div class="figure">
-            <div class="figure-head mono"><span>Tactile sensing with SNNs</span></div>
             <div class="stage">
               <p class="stage-note">Unfortunately, no images can be shared for this project because the research is still in progress and confidential.</p>
             </div>

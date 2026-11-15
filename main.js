@@ -507,11 +507,16 @@ const $$ = (s, el = document) => [...el.querySelectorAll(s)];
   if (page) {
     const canvas = $(".tex-canvas"), frame = $(".tex-frame"), label = $(".tex-zoom");
     let zoom = null;
+    const phone = window.matchMedia("screen and (max-width: 720px)");
     const fit = () => {
       const pad = parseFloat(getComputedStyle(canvas).paddingLeft) * 2;
       return Math.min(1.25, (canvas.clientWidth - pad) / page.offsetWidth);
     };
     const render = () => {
+      if (phone.matches) {
+        page.style.transform = frame.style.width = frame.style.height = "";
+        return;
+      }
       const s = zoom ?? fit();
       page.style.transform = `scale(${s})`;
       frame.style.width = page.offsetWidth * s + "px";
